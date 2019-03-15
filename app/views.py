@@ -41,11 +41,7 @@ def profile():
             email = form.email.data
             location = form.location.data
             bio = form.bio.data
-            photo = form.photo.data
-            
-            #Save the photo
-            filename = secure_filename(photo.filename)
-            photo.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            filename = assignPath(form.photo.data)
             
             #create user object and add to database
             user = UserProfile(fname,lname,gender,email,location,bio, filename)
@@ -66,6 +62,7 @@ def assignPath(upload):
     upload.save(os.path.join(
                 app.config['UPLOAD_FOLDER'], filename
     ))
+    return filename 
 
 
 # def get_uploaded_image(upload):
