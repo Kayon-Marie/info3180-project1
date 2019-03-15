@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <h1>Add Profile</h1>
+    <p>Fill in this form to create a user profile.</p>
+    <form action="{{ url_for('profile') }}" method="post" enctype="multipart/form-data">
+        {{ form.csrf_token }}
+        <div class="f-group">
+            {{form.firstname.label(class="label")}}
+            {{form.firstname}}
+        </div>
+        <div class="f-group">
+            {{form.lastname.label(class="label")}}
+            {{form.lastname}}
+        </div>
+        <div class="f-group">
+            {{form.gender.label(class="label")}}
+            {{form.gender}}
+        </div>
+        <div class="f-group">
+            {{form.email.label(class="label")}}
+            {{form.email}}
+        </div>
+        <div class="f-group">
+            {{form.location.label(class="label")}}
+            {{form.location}}
+        </div>
+        <div class="f-group">
+            {{form.bio.label(class="label")}}
+            {{form.bio}}
+        </div>
+        <div class="f-group">
+            {{form.photo.label(class="label")}}
+            {{form.photo}}
+        </div>
+        <div class="f-group">
+            {{form.submit}}
+        </div>
+    </form>
+{% endblock %}
