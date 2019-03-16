@@ -40,12 +40,32 @@ input[type=file]{
 
 input[type=submit]{
     color: #fff;
-    background-color:  #66ba06;
+    background-color:  #7bd417;
     border: none;
     border-radius: 5px;
     font-size: 10px;
     font-weight: bold;
     width: 100px;
-    height: 30px;
+    height: 25px;
     margin-top: 10px;
+}
+
+input[name="view"]{
+    width: 110px !important;
+    font-size: 12px !important;
+}
+
+.borderCol{
+    border-top-color:  #2e86c1 ;
+    border-top-width: 4px;
+    border-radius: 7px;
+}
+
+.editImg{
+    padding: 12px 0 0 12px;
+}
+
+.description{
+    margin: 4px;
+    font-size: 12px;
 }
