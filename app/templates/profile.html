@@ -2,39 +2,40 @@
 
 {% block main %}
     <h1>Add Profile</h1>
-    <p>Fill in this form to create a user profile.</p>
-    <form action="{{ url_for('profile') }}" method="post" enctype="multipart/form-data">
-        {{ form.csrf_token }}
-        <div class="f-group">
-            {{form.firstname.label(class="label")}}
-            {{form.firstname}}
+        <div class="borderCol">
+            <form action="{{ url_for('profile') }}" method="post" enctype="multipart/form-data">
+                {{ form.csrf_token }}
+                <div class="f-group">
+                    {{form.firstname.label(class="label")}}
+                    {{form.firstname(class="form-control")}}
+                </div>
+                <div class="f-group">
+                    {{form.lastname.label(class="label")}}
+                    {{form.lastname(class="form-control")}}
+                </div>
+                <div class="f-group">
+                    {{form.gender.label(class="label")}}
+                    {{form.gender(class="custom-select", default="Select Gender")}}
+                </div>
+                <div class="f-group">
+                    {{form.email.label(class="label")}}
+                    {{form.email(class="form-control",placeholder="e.g. jdoe@example.com")}}
+                </div>
+                <div class="f-group">
+                    {{form.location.label(class="label")}}
+                    {{form.location(class="form-control",placeholder="e.g. Kingston, Jamaica")}}
+                </div>
+                <div class="f-group">
+                    {{form.bio.label(class="label")}}
+                    {{form.bio(class="form-control")}}
+                </div>
+                <div class="f-group">
+                    {{form.photo.label(class="label")}}
+                    {{form.photo(class="btn-light")}}
+                </div>
+                <div class="f-group">
+                    {{form.submit}}
+                </div>
+            </form>
         </div>
-        <div class="f-group">
-            {{form.lastname.label(class="label")}}
-            {{form.lastname}}
-        </div>
-        <div class="f-group">
-            {{form.gender.label(class="label")}}
-            {{form.gender}}
-        </div>
-        <div class="f-group">
-            {{form.email.label(class="label")}}
-            {{form.email(placeholder="e.g. jdoe@example.com")}}
-        </div>
-        <div class="f-group">
-            {{form.location.label(class="label")}}
-            {{form.location(placeholder="e.g. Kingston, Jamaica")}}
-        </div>
-        <div class="f-group">
-            {{form.bio.label(class="label")}}
-            {{form.bio}}
-        </div>
-        <div class="f-group">
-            {{form.photo.label(class="label")}}
-            {{form.photo}}
-        </div>
-        <div class="f-group">
-            {{form.submit}}
-        </div>
-    </form>
 {% endblock %}

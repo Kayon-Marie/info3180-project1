@@ -1,7 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 body {
     padding-top: 5rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ebf5fb;
 }
+
+/*Applies light blue colour to the body of the individual
+  profiles that are displayed on profiles/<userid>*/
+/*.contain{*/
+    
+/*    padding: 0;*/
+/*    margin: 0 !important;*/
+/*    width: 793px !important;*/
+/*}*/
+
 
 h1{
     font-size: 30px;
@@ -18,54 +31,141 @@ h1{
     margin-bottom: 15px;
 }
 
-p{
-    font-size: 10px;
-}
-
-input{
+.f-group input{
     width: 350px;
     display: block;
 }
 
-textarea{
+select{
+    width: 350px !important;
+}
+
+.f-group textarea{
     width: 350px;
     height: 100px;
 }
 
 
-input[type=file]{
+.f-group input[type=file]{
     color: transparent;
 }
 
+button, input{
+    border-radius: 5px;
+    color: #fff;
+}
 
 input[type=submit]{
-    color: #fff;
     background-color:  #7bd417;
-    border: none;
-    border-radius: 5px;
-    font-size: 10px;
     font-weight: bold;
     width: 100px;
     height: 25px;
     margin-top: 10px;
+    font-size: 14px;
+    border: none;
 }
 
-input[name="view"]{
-    width: 110px !important;
-    font-size: 12px !important;
+
+button[name="view"]{
+    background-color: #7bd417 !important;
+    width: 116px;
+    height: 27px;
+    font-weight: bold;
+    font-size: 11px;
+    margin: 20px 10px 0 0;
+    border: none;
 }
 
+/*Adds the blue boder to the top of the profiles*/
 .borderCol{
-    border-top-color:  #2e86c1 ;
+    border-top-color:  #7fb3d5;
     border-top-width: 4px;
     border-radius: 7px;
 }
 
-.editImg{
-    padding: 12px 0 0 12px;
+
+/*Aligns the profile pictures on the profiles page*/
+.fixImg{
+    margin: 10px 0 0 15px;
+    height: 90px;
+}
+
+.profile{
+    font-weight: 900;
+    font-size: 14px;
+    margin: 0 0 4px 20px;
+}
+
+.descrip{
+    margin: 0 0 4px 20px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #979a9a;
+
+}
+
+.contain{
+    display: flex;
+    justify-content: center;
+}
+
+
+.image{
+    margin-top: 20px;
+    margin-left: 40px;
+    height: 120px;
+}
+
+.heading{
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 0 3px 38px;
 }
 
 .description{
-    margin: 4px;
+    margin: 0 0 14px 38px;
+    font-size: 13px;
+}
+
+h5{
+    font-weight: bold;
+}
+
+.edit{
     font-size: 12px;
+    margin: 0 0 8px 24px;
+    font-weight: bolder;
+}
+
+.bio{
+    font-size: 12px;
+    margin: 0 0 8px 24px;
+}
+
+.centered{
+    text-align: center;
+    padding: 20px 0 0 0 !important;
+}
+
+.no-border{
+    border-top: none !important;
+}
+
+button[name="message"]{
+    background-color: #7bd417 !important;
+    width: 170px;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 12px;
+    margin: 0 15px 0 0;
+}
+
+button[name="follow"]{
+    width: 170px;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 12px;
+    margin: 0 0 0 15px;
 }

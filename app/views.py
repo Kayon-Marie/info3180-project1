@@ -65,29 +65,17 @@ def assignPath(upload):
     return filename 
 
 
-# def get_uploaded_image(upload):
-#     photo = " "
-#     # valid_images = [".jpg",".png",".jpeg"]
-#     for subdir, dirs, files in os.walk(app.config['UPLOAD_FOLDER']):
-#         files = [f for f in files if not f[0] == '.']
-#         for file in files:
-#             f = os.path.splitext(os.path.basename(subdir))[0]
-#             if str(upload) in file:
-#                 photo = os.path.join(f, file)
-#                 print(photo)
-#     return photo
-
-
 @app.route("/profiles")
 def profiles():
     user_profiles = db.session.query(UserProfile).all()
     return render_template("profiles.html", users=user_profiles)
     
-# user_loader callback. This callback is used to reload the user object from
-# the user ID stored in the session
-# @login_manager.user_loader
-# def load_user(id):
-#     return UserProfile.query.get(int(id))
+
+@app.route("/profile/<userid>")
+def profileId(userid):
+    user = db.session.query(UserProfile).filter_by(id=int(userid)).first()
+    return render_template("individual.html", user=user)
+    
 
 ###
 # The functions below should be applicable to all Flask apps.
