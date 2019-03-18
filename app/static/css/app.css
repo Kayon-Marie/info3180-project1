@@ -95,9 +95,9 @@ button[name="view"]{
 
 /*Adds the blue boder to the top of the profiles*/
 .borderCol{
-    border-top-color:  #7fb3d5;
-    border-top-width: 4px;
-    border-radius: 7px;
+    border-top-color:  #7fb3d5 !important;
+    border-top-width: 4px !important;
+    border-radius: 7px !important;
 }
 
 
